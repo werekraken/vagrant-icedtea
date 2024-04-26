@@ -1,0 +1,5 @@
+{
+  "policies": {
+    "SSLVersionMin": "tls1"
+  }
+}

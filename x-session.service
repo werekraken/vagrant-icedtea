@@ -1,0 +1,12 @@
+# When starting the GUI with `systemctl --user start xfce4-session` some
+#   applications, like the TerminalEmulator, failed to launch.
+#
+# Let's emulate `/usr/lib/systemd/user/xfce4-session.service`, but use
+#   `/usr/bin/startx` instead.
+
+[Unit]
+Description=X Session Manager
+PartOf=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/startx
