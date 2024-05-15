@@ -5,7 +5,7 @@ set -e
 mkdir -p ~/.config/xfce4/xfconf/xfce-perchannel-xml/
 cp /vagrant/displays.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/displays.xml
 
-systemctl --user start x-session
+systemctl --user enable --now x-session
 
 # Something is resetting the display resolution after `startx` has started
 #   the GUI and `xfce4` has set the display resolution to the values in:
